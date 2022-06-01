@@ -16,7 +16,6 @@ if (isset($_GET['checkout']) && isset($_GET['uuid'])) {
         $total += $productInCart[$i]->SL * $productInCart[$i]->GIA;
     }
 
-
     $sql = "INSERT INTO hoadon(MAHD, MAKH, TINHTRANG, NGAYHD, TONGTIEN)
         VALUES ('$uuid', ".$_SESSION['IDCustomer'].", 'ĐANG XỬ LÝ', '$date', ".$total.")";
     execute($sql);
@@ -28,4 +27,5 @@ if (isset($_GET['checkout']) && isset($_GET['uuid'])) {
                 )";
         execute($sqlcthd);
     }
+
 }

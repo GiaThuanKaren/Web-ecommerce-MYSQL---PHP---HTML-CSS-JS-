@@ -1,6 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-sessionStorage.setItem("cart", JSON.stringify([]));
+// sessionStorage.setItem("cart", JSON.stringify([]));
 const catalogListPC = $(".category-list");
 const catalogListMobile = $(".mobile-category__list");
 const catalogListFooter = $(".footer-list");
@@ -11,6 +11,7 @@ let CurrentArrItems = [];
 let SearchArrItems = [];
 let CurrentPage = 0;
 let searchString = "";
+
 function GenerarePageNum(step, end) {
   let arr = [];
   for (let i = 0; i <= end; i += step) {
@@ -28,12 +29,6 @@ RenderCatolog();
 GetProduct();
 ControlPage();
 GetSearchProduct();
-
-function DeleteLogout() {
-  console.log("Delete Local");
-  localStorage.removeItem("login");
-  window.location.href = "handle_logout.php";
-}
 
 function GetSearchProduct() {
   var xmlhttp = new XMLHttpRequest();
@@ -129,7 +124,7 @@ function GetPaginationForProduct(From, To) {
 
 function RenderProducts(Arr) {
   console.log("Arr Product ", Arr);
-  Arr = Sort("INS", Arr);
+  Arr = Sort('INS', Arr);
   let htmls = Arr.map(function (item, idx) {
     let html = `
     <div id="${item.MASP}" class="col l-2-4 m-4 c-6">
@@ -224,6 +219,7 @@ function Catolog() {
 }
 
 SearchFeature();
+
 function SearchFeature() {
   let ArrResultSearch = [];
   console.log($(".header__search-input"));
@@ -299,43 +295,44 @@ function RenderModalDetail(item) {
       </div>
       <div class="modal-detail-product-btns">
           <div class="modal-detail-product-addToCart modal-detail-product-btn">Thêm vào giỏ hàng</div>
-          
+          <a href="./Payment.html" class="modal-detail-product-BuyNow modal-detail-product-btn">Mua ngay</a>
       </div>
   </div>
   `;
   $(".modal-detail-product-body").insertAdjacentHTML("beforeend", html);
   ModalControl();
   $(".modal-detail-product-addToCart").onclick = function (e) {
-    if (!JSON.parse(localStorage.getItem("login"))) {
-      window.location.href = "login.php";
-      return;
-    }
-    let getData = JSON.parse(sessionStorage.getItem("cart"));
-    // console.log(sessionStorage.getItem("cart"));
-    let index = -1;
-    let check = getData.find(function (item1, idx) {
-      if (item1.MASP == item.MASP) index = idx;
-      return item1.MASP == item.MASP;
-    });
-    let sl = 0;
-    if (check != null) {
-      console.log("vi tri cat tai ", index);
-      let res = getData.splice(index, 1);
-      console.log("Đã có sản phẩm trong cart -> tăng số lượng sp", res);
-      res[0].SL = res[0].SL + 1;
-      // console.log( res[index]);
-      getData = [...getData, ...res];
-      // console.log(getData)
+    if (sessionStorage.getItem('cart') == null) {
+      alert('Bạn chưa đăng nhập để mua hàng');
+      window.location.href = 'login.php';
     } else {
-      console.log("Chưa có sản phẩm trong cart -> gán số lượng = 1");
-      let obj = {
-        ...item,
-        SL: 1,
-      };
-      getData = [...getData, obj];
+      let getData = JSON.parse(sessionStorage.getItem("cart"));
+      // console.log(sessionStorage.getItem("cart"));
+      let index = -1;
+      let check = getData.find(function (item1, idx) {
+        if (item1.MASP == item.MASP) index = idx;
+        return item1.MASP == item.MASP;
+      });
+      let sl = 0;
+      if (check != null) {
+        console.log("vi tri cat tai ", index);
+        let res = getData.splice(index, 1);
+        console.log("Đã có sản phẩm trong cart -> tăng số lượng sp", res);
+        res[0].SL = res[0].SL + 1;
+        // console.log( res[index]);
+        getData = [...getData, ...res];
+        // console.log(getData)
+      } else {
+        console.log("Chưa có sản phẩm trong cart -> gán số lượng = 1");
+        let obj = {
+          ...item,
+          SL: 1,
+        };
+        getData = [...getData, obj];
+      }
+      sessionStorage.setItem("cart", JSON.stringify(getData));
+      DisplayCart();
     }
-    sessionStorage.setItem("cart", JSON.stringify(getData));
-    DisplayCart();
   };
   // $('.modal-detail-product-addToCart').onclick=function(){
   //     let Product={
@@ -362,6 +359,7 @@ function RenderModalDetail(item) {
   //     GetQuantityCartProduct();
   //  }
 }
+
 function GetDetailProduct() {
   let res = $(".home-product .row").children;
   for (let i = 0; i < res.length; i++) {
@@ -454,9 +452,13 @@ function DisplayCart() {
 }
 
 function ChooseSortProduct() {
-  $(".increasefliter").onclick = function (e) {};
+  $(".increasefliter").onclick = function (e) {
 
-  $(".decreasefliter").onclick = function (e) {};
+  };
+
+  $(".decreasefliter").onclick = function (e) {
+
+  };
 }
 
 function BoolGetCheck(item1, item2, condition) {
@@ -473,8 +475,8 @@ function Sort(condition, Arr) {
         console.log(bool, Arr[i], Arr[j]);
         let tmp = Arr[i];
         let tmp2 = Arr[j];
-        Arr[i] = tmp2;
-        Arr[j] = tmp;
+        Arr[i] = tmp2
+        Arr[j] = tmp
         console.log(Arr[i], Arr[j]);
       }
     }
@@ -487,37 +489,21 @@ function uuid() {
   var temp_url = URL.createObjectURL(new Blob());
   var uuid = temp_url.toString();
   URL.revokeObjectURL(temp_url);
-  return uuid.substr(uuid.lastIndexOf("/") + 1);
+  return uuid.substr(uuid.lastIndexOf('/') + 1);
 }
 
 const checkOutCart = () => {
   let ArrTiem = JSON.stringify(sessionStorage.getItem("cart"));
-  console.log("ArrItem: ", ArrTiem);
+  console.log('ArrItem: ', ArrTiem);
   var xmlhttpCheckOut = new XMLHttpRequest();
   xmlhttpCheckOut.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
+      ArrTiem = [];
+      sessionStorage.setItem('cart', JSON.stringify(ArrTiem));
+      DisplayCart();
     }
   };
-  xmlhttpCheckOut.open(
-    "GET",
-    "handle_checkout.php?checkout=" + ArrTiem + "&uuid=" + uuid(),
-    true
-  );
+  xmlhttpCheckOut.open("GET", "handle_checkout.php?checkout=" + ArrTiem + "&uuid=" + uuid(), true);
   xmlhttpCheckOut.send();
-};
-
-// const handleCheckUser = () => {
-//   var buttonCheckUser = $('.modal-detail-product-addToCart');
-
-//   buttonCheckUser.onclick = function() {
-//     var xmlhttpCheckUser = new XMLHttpRequest();
-//     xmlhttpCheckUser.onreadystatechange = function () {
-//       if (this.readyState == 4 && this.status == 200) {
-//        console.log(this.responseText);
-//       }
-//     };
-//     xmlhttpCheckUser.open("GET", "handle_cart.php", true);
-//     xmlhttpCheckUser.send();
-//   }
-// }
+}

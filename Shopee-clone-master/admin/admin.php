@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['role'])) {
+    header('Location: 404notfound.php');
+    return;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +23,9 @@ session_start();
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./../assest/css/admin.css">
+
     <title>Admin page manager</title>
 </head>
 
@@ -55,12 +62,6 @@ session_start();
                                 <span class="title">Bill</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="./../handle_logout.php">
-                                <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
-                                <span class="title">Sign Out</span>
-                            </a>
-                        </li>
                     ';
                 } else {
                 ?>
@@ -78,10 +79,17 @@ session_start();
                             <span class="title">Statistical</span>
                         </a>
                     </li>
+                 
                 
                 ';
                 }
                 ?>
+                <li>
+                    <a href="./../handle_logout.php">
+                        <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -176,6 +184,7 @@ session_start();
             if (($_GET['page']) == 'statistical') {
                 require_once('handle_statistical.php');
             }
+       
         }
         ?>
 

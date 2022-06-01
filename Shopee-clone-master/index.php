@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,7 +90,7 @@ session_start();
 
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
-                            <a href="./home.php" class="header__navbar-item-link">
+                            <a href="./home.php?page=1&trang=1?CompanyList&id=20008" class="header__navbar-item-link">
                                 <i class="fas fa-home"></i>
                                 Trang chủ
                             </a>
@@ -147,7 +146,7 @@ session_start();
                         <li class="header__navbar-item header__navbar-user">
                             <?php if (isset($_SESSION['nameUser'])) : ?>
                                 <img src="./assest/img/obito.jpg">
-                                <a href="./Register.php" class="header__navbar-user-name" id="<?php echo $_SESSION['IDCustomer'] ?>"><?php echo $_SESSION['nameUser']  ?></a>
+                                <a href="./Register.php" class="header__navbar-user-name"><?php echo $_SESSION['nameUser'] ?></a>
                                 <ul class="header__navbar-user-menu">
                                     <li class="header__navbar-user-item">
                                         <a href="">Tài Khoản Của Tôi</a>
@@ -159,7 +158,7 @@ session_start();
                                         <a href="./historyPayment.php">Đơn Mua</a>
                                     </li>
                                     <li class="header__navbar-user-item logout-btn header__navbar-user-item--separate">
-                                        <a  onclick="DeleteLogout()">Đăng Xuất</a>
+                                        <a href="./handle_logout.php">Đăng Xuất</a>
                                     </li>
                                 </ul>
                             <?php else : ?>

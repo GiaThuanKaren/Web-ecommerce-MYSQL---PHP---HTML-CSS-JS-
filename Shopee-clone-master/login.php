@@ -364,9 +364,7 @@
                             pass: password
                         },
                         success: function(data) {
-                            let get =data[0];
                             if (data == 'success-user') {
-                                localStorage.setItem('login','true');
                                 window.location.href = 'index.php';
                             } else if (data == '') {
                                 $('.error-name').html('Account don\'t exitst. Please enter create account');
@@ -376,6 +374,7 @@
                                 $('.error-password').html('Incorrect password');
                             }
                             console.log(data);
+                            sessionStorage.setItem("cart", JSON.stringify([]));
                         }
                     })
                 }

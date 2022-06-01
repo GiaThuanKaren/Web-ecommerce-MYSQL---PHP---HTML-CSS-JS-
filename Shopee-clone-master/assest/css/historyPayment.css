@@ -960,8 +960,11 @@
 }
 
 .Main-container .List-product{
-
+    display: block;
+    width: 100%;
+    font-size: 150%;
 }
+
 
 .Main-container .List-product  .list-product-item{
     margin: 5px 0;
@@ -1017,4 +1020,23 @@ details ul li{
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.2rem;
+}
+table {
+    width: 100%;        
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+th {
+    width: 18%;
+    text-align: center;
+}
+tr{
+    width: 20%;
+    text-align: center;
+}
+.info_user span, .detail_user span {
+    font-size: 200%;
 }

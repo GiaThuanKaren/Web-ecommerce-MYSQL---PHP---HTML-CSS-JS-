@@ -14,7 +14,7 @@ if (isset($_POST['textContent'])) {
               ); 
         }
 
-        $json = json_encode(array("chart" => $chart_data, "message" => "MONTHLY REVENUE"));  //encode the array into a valid JSON object
+        $json = json_encode(array("chart" => $chart_data, "message" => "MONTHLY REVENUE", "type" => "Line"));  //encode the array into a valid JSON object
         echo $json;
     } 
     if ($textContent == 'MONTHLY REVENUE') {
@@ -29,7 +29,7 @@ if (isset($_POST['textContent'])) {
               ); 
         }
 
-        $json = json_encode(array("chart" => $chart_data, "message" => "BEST - SELLING PRODUCT"));  //encode the array into a valid JSON object
+        $json = json_encode(array("chart" => $chart_data, "message" => "BEST - SELLING PRODUCT", "type" => "Bar"));  //encode the array into a valid JSON object
         echo $json;
     }
 }

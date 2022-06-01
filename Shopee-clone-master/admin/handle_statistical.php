@@ -1,11 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 <div id="statistical-title">
     <h2>BEST - SELLING PRODUCT</h2><span>Changed</span>
 </div>
@@ -111,7 +103,17 @@ $chartData = substr($chartData, 0, -2); // Xóa dấu cách và dấu phẩy ở
     </div>
 </div>
 
-</div>
+<!-- Ajax -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Morris -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<!-- Ajax jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- jQuery UI -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script>
     $(document).ready(function() {
@@ -123,19 +125,22 @@ $chartData = substr($chartData, 0, -2); // Xóa dấu cách và dấu phẩy ở
             $("#to_date").datepicker();
         });
         $('#filter').click(function() {
-            console.log('Enter');
             var from_date = $('#from_date').val();
             var to_date = $('#to_date').val();
+            var chooseSta = $('#selectRole').val();
+            console.log('From date: ', from_date, ' To date: ', to_date, ' Choose: ', chooseSta);
             if (from_date != '' && to_date != '') {
                 $.ajax({
                     url: "filter.php",
                     method: "POST",
                     data: {
                         from_date: from_date,
-                        to_date: to_date
+                        to_date: to_date,
+                        chooseSta: chooseSta
                     },
                     success: function(data) {
                         $('.render__statistical').html(data);
+                        console.log('Data statistical: ', data);
                     }
                 });
             } else {
@@ -158,7 +163,7 @@ $chartData = substr($chartData, 0, -2); // Xóa dấu cách và dấu phẩy ở
                 },
                 dataType: "json",
                 success: function(result) {
-                    console.log(result);
+                    console.log(result.type);
                     Morris.Bar({
                         // ID of the element in which to draw the chart.
                         element: 'myfirstchart',

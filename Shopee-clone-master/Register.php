@@ -325,7 +325,7 @@
                 var username = $("input[type='text']").val();
                 var email = $("input[type='email']").val();
                 var password = $("#password-register").val();
-                var re_password = $("#re-password-register").val();
+                var re_password = $("#re-password-register").val();       
 
                 // --- Check value to form ---
 

@@ -35,7 +35,7 @@ if (!empty($_POST)) {
         require_once('./../define_connect.php');
 
         // Create a connect to database phpMyAdmin
-        $connect = new mysqli(HOST, USERNAME, PASSWORD, DATABASE, 3307);
+        $connect = new mysqli(HOST, USERNAME, PASSWORD, DATABASE, 3306);
 
         $sql = "INSERT INTO sanpham (TENSP, SOLUONG, GIA, DONVITINH, 
         MAHANG, IMG, DESCRIPTION, enable) 

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 12, 2022 lúc 06:43 PM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.1
+-- Host: 127.0.0.1:3307
+-- Generation Time: May 24, 2022 at 02:58 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `datafinal9`
+-- Database: `datafinal9`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chitiethd`
+-- Table structure for table `chitiethd`
 --
 
 CREATE TABLE `chitiethd` (
@@ -35,29 +35,43 @@ CREATE TABLE `chitiethd` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chitiethd`
+-- Dumping data for table `chitiethd`
 --
 
 INSERT INTO `chitiethd` (`MAHD`, `MASP`, `SLUONG`, `DONGIA`) VALUES
+('00f55fa3-1972-4ec2-824e-dd6bb6', 65, 1, 7056480),
+('0b38e2c6-1431-49de-878a-bf3649', 64, 1, 4281120),
+('0b38e2c6-1431-49de-878a-bf3649', 65, 1, 7056480),
+('0ceddc27-bcc5-4241-b45b-c9d9b9', 64, 2, 4281120),
+('0ceddc27-bcc5-4241-b45b-c9d9b9', 65, 1, 7056480),
+('0ceddc27-bcc5-4241-b45b-c9d9b9', 66, 1, 6938380),
 ('1004e790-30a2-4589-bf53-10807f', 23, 2, 1250),
 ('1004e790-30a2-4589-bf53-10807f', 24, 2, 195),
 ('1004e790-30a2-4589-bf53-10807f', 46, 2, 399),
+('15899e20-e1ec-4306-90a4-ed03ab', 66, 1, 6938380),
+('197c8377-00ae-4671-a757-50007f', 66, 1, 6938380),
 ('1cfa7e95-9d9a-429b-85ff-9f67df', 64, 2, 4281120),
 ('1cfa7e95-9d9a-429b-85ff-9f67df', 65, 2, 7056480),
 ('1cfa7e95-9d9a-429b-85ff-9f67df', 66, 1, 6938380),
-('26ab66a2-1470-44f8-8894-157d80', 65, 1, 7056480),
+('2480b64c-58c5-4a18-8a8f-8b69bd', 65, 1, 7056480),
 ('27297cf8-c777-4b77-bef2-cc7615', 65, 2, 7056480),
 ('27297cf8-c777-4b77-bef2-cc7615', 66, 2, 6938380),
+('28a29a67-7bff-4ad4-9e94-3db734', 66, 1, 6938380),
 ('2b4a79e6-d6f6-479d-8beb-e7c67b', 34, 1, 356),
 ('2b4a79e6-d6f6-479d-8beb-e7c67b', 93, 1, 3863640),
 ('2b4a79e6-d6f6-479d-8beb-e7c67b', 94, 1, 2988180),
 ('2e0aa26a-3317-4acb-86f4-940759', 63, 10, 2922980),
 ('2e0aa26a-3317-4acb-86f4-940759', 65, 5, 7056480),
 ('2e0aa26a-3317-4acb-86f4-940759', 76, 5, 2034090),
-('3d2c4d46-b66c-4a88-852b-f49a4c', 65, 1, 7056480),
-('4288a932-a779-4c9f-8e26-eb3fd3', 65, 1, 7056480),
-('5a9298e5-ba5b-4bf7-8867-4c73c0', 65, 1, 7056480),
-('5bb44669-1378-4725-afa3-74fec8', 65, 1, 7056480),
+('2f4b44ba-12b5-4b42-b71f-533ab5', 64, 1, 4281120),
+('2f4b44ba-12b5-4b42-b71f-533ab5', 66, 1, 6938380),
+('4291641c-bf39-4bc2-80a1-3540f0', 66, 1, 6938380),
+('454d4213-8d61-4bc2-9187-833db6', 63, 1, 2922980),
+('454d4213-8d61-4bc2-9187-833db6', 64, 1, 4281120),
+('454d4213-8d61-4bc2-9187-833db6', 65, 5, 7056480),
+('596d5699-79c2-43e1-b113-4a9931', 65, 2, 7056480),
+('5c48a53b-d7ec-4403-9c4d-7befdf', 66, 1, 6938380),
+('5ca7ab09-ba97-482d-8471-42e3eb', 66, 1, 6938380),
 ('5e636af9-61c1-4dfd-9c49-31fcbe', 53, 1, 359),
 ('5e636af9-61c1-4dfd-9c49-31fcbe', 55, 1, 929),
 ('5e636af9-61c1-4dfd-9c49-31fcbe', 59, 1, 459),
@@ -66,17 +80,28 @@ INSERT INTO `chitiethd` (`MAHD`, `MASP`, `SLUONG`, `DONGIA`) VALUES
 ('628ac22b-574b-4118-9904-f30cbb', 29, 1, 652),
 ('628ac22b-574b-4118-9904-f30cbb', 54, 2, 799),
 ('628ac22b-574b-4118-9904-f30cbb', 61, 2, 359),
-('6312d7e9-7931-48d0-9292-b2fc47', 64, 1, 4281120),
-('80548563-1c47-42b6-be28-17c4bd', 65, 1, 7056480),
-('80548563-1c47-42b6-be28-17c4bd', 73, 1, 3367720),
-('8c997fca-e8ac-4162-8775-22b6bd', 65, 1, 7056480),
-('900cbdf6-29ae-4334-be97-9037a4', 65, 1, 7056480),
+('640a79a8-51b5-45cc-b86f-edd66a', 65, 1, 7056480),
+('6ae52287-7c29-482e-985a-92e179', 65, 1, 7056480),
+('6ae52287-7c29-482e-985a-92e179', 66, 1, 6938380),
+('6b470cb8-9c3c-4253-822c-b47218', 63, 1, 2922980),
+('6b470cb8-9c3c-4253-822c-b47218', 65, 2, 7056480),
+('6dcfd644-a61f-4485-8bee-d6a7f8', 66, 3, 6938380),
+('82525afc-f83e-4c90-87fd-04b683', 65, 1, 7056480),
+('8918f7c5-5285-4fc4-9c81-29b03d', 65, 1, 7056480),
+('8918f7c5-5285-4fc4-9c81-29b03d', 66, 1, 6938380),
+('8a3e2fdc-9222-427b-8c3e-c1658c', 63, 1, 2922980),
+('8a3e2fdc-9222-427b-8c3e-c1658c', 64, 1, 4281120),
+('8a3e2fdc-9222-427b-8c3e-c1658c', 65, 2, 7056480),
+('8b2388e3-4562-44b3-809c-8d1e03', 65, 1, 7056480),
+('8b2388e3-4562-44b3-809c-8d1e03', 66, 1, 6938380),
 ('90fac6be-6922-4804-a01d-e63981', 35, 2, 1520),
 ('90fac6be-6922-4804-a01d-e63981', 54, 1, 799),
 ('90fac6be-6922-4804-a01d-e63981', 55, 1, 929),
 ('90fac6be-6922-4804-a01d-e63981', 76, 2, 2034090),
 ('90fac6be-6922-4804-a01d-e63981', 100, 1, 2272730),
 ('90fac6be-6922-4804-a01d-e63981', 101, 1, 2066750),
+('931bd2c5-ab90-40c0-ac96-ed9d63', 65, 1, 7056480),
+('931bd2c5-ab90-40c0-ac96-ed9d63', 66, 1, 6938380),
 ('94e339fd-a184-4fce-9782-faf9e8', 25, 1, 2150),
 ('94e339fd-a184-4fce-9782-faf9e8', 63, 1, 2922980),
 ('94e339fd-a184-4fce-9782-faf9e8', 75, 2, 1134060),
@@ -84,22 +109,35 @@ INSERT INTO `chitiethd` (`MAHD`, `MASP`, `SLUONG`, `DONGIA`) VALUES
 ('96cf0723-dcbe-49a7-874c-8553d9', 54, 1, 799),
 ('96cf0723-dcbe-49a7-874c-8553d9', 55, 1, 929),
 ('96cf0723-dcbe-49a7-874c-8553d9', 76, 2, 2034090),
-('b367fce8-b87d-4ccd-b4b8-ee4bbf', 65, 1, 7056480),
-('d174c63e-a621-4d3c-acf5-b74797', 65, 1, 7056480),
+('977056ad-2e23-48f3-942d-7f9c1b', 66, 1, 6938380),
+('a1a43635-a975-4180-b1da-acd1f0', 63, 1, 2922980),
+('a1a43635-a975-4180-b1da-acd1f0', 64, 1, 4281120),
+('a1a43635-a975-4180-b1da-acd1f0', 65, 1, 7056480),
+('b8967aca-a6e0-497e-8812-8c6d75', 65, 1, 7056480),
+('ba083f6f-7f1b-4060-a3b5-5dd0e9', 64, 1, 4281120),
+('ba083f6f-7f1b-4060-a3b5-5dd0e9', 65, 1, 7056480),
+('d63c6808-d2c1-49b7-b173-885d30', 63, 1, 2922980),
+('d63c6808-d2c1-49b7-b173-885d30', 65, 1, 7056480),
+('de5835b6-a993-4ddc-bcc1-9dba29', 64, 2, 4281120),
+('de5835b6-a993-4ddc-bcc1-9dba29', 65, 1, 7056480),
+('dfc5af22-2fcb-4696-a3d8-7bf433', 63, 2, 2922980),
+('dfc5af22-2fcb-4696-a3d8-7bf433', 65, 2, 7056480),
+('e06acad2-3f78-425e-9d73-ff5b64', 66, 1, 6938380),
+('e160582f-ef52-48a8-bee0-ad9b60', 65, 1, 7056480),
+('e160582f-ef52-48a8-bee0-ad9b60', 66, 1, 6938380),
 ('e82dc0a8-487f-48ce-a4a6-d93fb1', 52, 1, 799),
 ('e82dc0a8-487f-48ce-a4a6-d93fb1', 65, 1, 7056480),
 ('e82dc0a8-487f-48ce-a4a6-d93fb1', 76, 1, 2034090),
 ('f6312217-db25-474d-b3e8-9c252a', 54, 1, 799),
 ('f6312217-db25-474d-b3e8-9c252a', 55, 1, 929),
 ('f6312217-db25-474d-b3e8-9c252a', 76, 2, 2034090),
-('f80ee829-8c62-40c2-9b7e-bae14c', 65, 1, 7056480),
 ('ff05b642-5d54-4698-99b1-99edbc', 94, 1, 2988180),
 ('ff05b642-5d54-4698-99b1-99edbc', 100, 1, 2272730);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hang`
+-- Table structure for table `hang`
 --
 
 CREATE TABLE `hang` (
@@ -109,7 +147,7 @@ CREATE TABLE `hang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hang`
+-- Dumping data for table `hang`
 --
 
 INSERT INTO `hang` (`MAHANG`, `TENHANG`, `MALOAI`) VALUES
@@ -125,7 +163,7 @@ INSERT INTO `hang` (`MAHANG`, `TENHANG`, `MALOAI`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoadon`
+-- Table structure for table `hoadon`
 --
 
 CREATE TABLE `hoadon` (
@@ -138,42 +176,59 @@ CREATE TABLE `hoadon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoadon`
+-- Dumping data for table `hoadon`
 --
 
 INSERT INTO `hoadon` (`MAHD`, `MAKH`, `MANV`, `TINHTRANG`, `NGAYHD`, `TONGTIEN`) VALUES
-('0a2b4295-4553-4ec1-a2bf-d5493f', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:22:22', 0),
+('00f55fa3-1972-4ec2-824e-dd6bb6', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 18:52:52', 7056475),
+('0b38e2c6-1431-49de-878a-bf3649', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 18:51:30', 11337600),
+('0ceddc27-bcc5-4241-b45b-c9d9b9', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 18:50:48', 22557100),
 ('1004e790-30a2-4589-bf53-10807f', 1, 1005, 'ĐÃ XỬ LÝ', '2022-05-06 15:56:10', 3688),
+('15899e20-e1ec-4306-90a4-ed03ab', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:40:41', 6938375),
+('197c8377-00ae-4671-a757-50007f', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:40:39', 6938375),
 ('1cfa7e95-9d9a-429b-85ff-9f67df', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-05 15:49:22', 29613575),
-('26ab66a2-1470-44f8-8894-157d80', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:25', 7056475),
+('2480b64c-58c5-4a18-8a8f-8b69bd', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 14:55:15', 7056475),
 ('27297cf8-c777-4b77-bef2-cc7615', 1, 1003, 'ĐÃ XỬ LÝ', '2022-01-07 15:55:17', 27989700),
+('28a29a67-7bff-4ad4-9e94-3db734', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 15:41:52', 6938375),
 ('2b4a79e6-d6f6-479d-8beb-e7c67b', 1, 1005, 'ĐÃ XỬ LÝ', '2022-01-04 15:57:39', 6852173),
 ('2e0aa26a-3317-4acb-86f4-940759', 1, 1005, 'ĐÃ XỬ LÝ', '2022-05-06 16:47:40', 74682575),
-('3d2c4d46-b66c-4a88-852b-f49a4c', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:33:16', 7056475),
-('4288a932-a779-4c9f-8e26-eb3fd3', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:28', 7056475),
-('5a9298e5-ba5b-4bf7-8867-4c73c0', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:28', 7056475),
-('5bb44669-1378-4725-afa3-74fec8', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:28', 7056475),
+('2f4b44ba-12b5-4b42-b71f-533ab5', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:31:41', 11219500),
+('4291641c-bf39-4bc2-80a1-3540f0', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:40:41', 6938375),
+('454d4213-8d61-4bc2-9187-833db6', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:29:28', 42486475),
+('596d5699-79c2-43e1-b113-4a9931', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-10 02:25:39', 14112950),
+('5c48a53b-d7ec-4403-9c4d-7befdf', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:41:54', 6938375),
+('5ca7ab09-ba97-482d-8471-42e3eb', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:41:50', 6938375),
 ('5e636af9-61c1-4dfd-9c49-31fcbe', 1, 1003, 'ĐÃ XỬ LÝ', '2022-02-18 15:57:26', 5262655),
 ('628ac22b-574b-4118-9904-f30cbb', 1, 1007, 'ĐÃ XỬ LÝ', '2022-02-01 15:55:56', 2968),
-('6312d7e9-7931-48d0-9292-b2fc47', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-10 02:15:21', 4281125),
-('80548563-1c47-42b6-be28-17c4bd', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-10 02:13:39', 10424199),
-('8c997fca-e8ac-4162-8775-22b6bd', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:33:37', 7056475),
-('900cbdf6-29ae-4334-be97-9037a4', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:26', 7056475),
+('640a79a8-51b5-45cc-b86f-edd66a', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:26:03', 7056475),
+('6ae52287-7c29-482e-985a-92e179', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 14:56:29', 13994850),
+('6b470cb8-9c3c-4253-822c-b47218', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 18:42:26', 17035925),
+('6dcfd644-a61f-4485-8bee-d6a7f8', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-13 10:25:13', 20815125),
+('82525afc-f83e-4c90-87fd-04b683', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 18:41:41', 7056475),
+('8918f7c5-5285-4fc4-9c81-29b03d', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 14:56:33', 13994850),
+('8a3e2fdc-9222-427b-8c3e-c1658c', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:27:58', 21317050),
+('8b2388e3-4562-44b3-809c-8d1e03', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 14:56:32', 13994850),
 ('90fac6be-6922-4804-a01d-e63981', 1, 1005, 'ĐÃ XỬ LÝ', '2022-03-20 15:57:06', 8412425),
+('931bd2c5-ab90-40c0-ac96-ed9d63', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 18:53:20', 13994850),
 ('94e339fd-a184-4fce-9782-faf9e8', 1, 1007, 'ĐÃ XỬ LÝ', '2022-06-06 15:55:41', 5193235),
 ('96cf0723-dcbe-49a7-874c-8553d9', 1, 1007, 'ĐÃ XỬ LÝ', '2022-07-13 15:56:31', 4072948),
-('9e4bb8d5-cdd3-4839-9429-80e7de', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:22:21', 0),
-('b367fce8-b87d-4ccd-b4b8-ee4bbf', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-10 02:05:39', 7056475),
-('d174c63e-a621-4d3c-acf5-b74797', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:28', 7056475),
+('977056ad-2e23-48f3-942d-7f9c1b', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:40:30', 6938375),
+('a1a43635-a975-4180-b1da-acd1f0', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:27:50', 14260575),
+('b8967aca-a6e0-497e-8812-8c6d75', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 15:39:52', 7056475),
+('ba083f6f-7f1b-4060-a3b5-5dd0e9', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 18:45:35', 11337600),
+('d63c6808-d2c1-49b7-b173-885d30', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 15:39:20', 9979450),
+('de5835b6-a993-4ddc-bcc1-9dba29', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 18:45:56', 15618725),
+('dfc5af22-2fcb-4696-a3d8-7bf433', 1, 1002, 'ĐÃ XỬ LÝ', '2022-05-16 18:53:03', 19958900),
+('e06acad2-3f78-425e-9d73-ff5b64', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 15:41:54', 6938375),
+('e160582f-ef52-48a8-bee0-ad9b60', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-16 14:56:32', 13994850),
 ('e82dc0a8-487f-48ce-a4a6-d93fb1', 1, 1002, 'ĐÃ XỬ LÝ', '2022-08-05 17:07:34', 9091364),
 ('f6312217-db25-474d-b3e8-9c252a', 1, 1007, 'ĐÃ XỬ LÝ', '2022-09-14 15:56:22', 4069908),
-('f80ee829-8c62-40c2-9b7e-bae14c', 1, NULL, 'ĐANG XỬ LÝ', '2022-05-09 14:09:27', 7056475),
 ('ff05b642-5d54-4698-99b1-99edbc', 1, 1007, 'ĐÃ XỬ LÝ', '2022-10-04 15:57:18', 5260908);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khachhang`
+-- Table structure for table `khachhang`
 --
 
 CREATE TABLE `khachhang` (
@@ -187,7 +242,7 @@ CREATE TABLE `khachhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `khachhang`
+-- Dumping data for table `khachhang`
 --
 
 INSERT INTO `khachhang` (`MAKH`, `HOKH`, `TENKH`, `USERID_KH`, `DIACHI`, `SDT`, `enable_kh`) VALUES
@@ -196,7 +251,7 @@ INSERT INTO `khachhang` (`MAKH`, `HOKH`, `TENKH`, `USERID_KH`, `DIACHI`, `SDT`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loai`
+-- Table structure for table `loai`
 --
 
 CREATE TABLE `loai` (
@@ -205,7 +260,7 @@ CREATE TABLE `loai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loai`
+-- Dumping data for table `loai`
 --
 
 INSERT INTO `loai` (`MALOAI`, `TENLOAI`) VALUES
@@ -217,7 +272,7 @@ INSERT INTO `loai` (`MALOAI`, `TENLOAI`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhacungcap`
+-- Table structure for table `nhacungcap`
 --
 
 CREATE TABLE `nhacungcap` (
@@ -232,7 +287,7 @@ CREATE TABLE `nhacungcap` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhanvien`
+-- Table structure for table `nhanvien`
 --
 
 CREATE TABLE `nhanvien` (
@@ -245,7 +300,7 @@ CREATE TABLE `nhanvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `nhanvien`
+-- Dumping data for table `nhanvien`
 --
 
 INSERT INTO `nhanvien` (`MANV`, `HONV`, `TENNV`, `DIACHI`, `SDT`, `USERID_NV`) VALUES
@@ -260,7 +315,7 @@ INSERT INTO `nhanvien` (`MANV`, `HONV`, `TENNV`, `DIACHI`, `SDT`, `USERID_NV`) V
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `phieunhaphang`
+-- Table structure for table `phieunhaphang`
 --
 
 CREATE TABLE `phieunhaphang` (
@@ -276,7 +331,7 @@ CREATE TABLE `phieunhaphang` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quyen`
+-- Table structure for table `quyen`
 --
 
 CREATE TABLE `quyen` (
@@ -285,7 +340,7 @@ CREATE TABLE `quyen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `quyen`
+-- Dumping data for table `quyen`
 --
 
 INSERT INTO `quyen` (`MAQUYEN`, `TENQUYEN`) VALUES
@@ -297,7 +352,7 @@ INSERT INTO `quyen` (`MAQUYEN`, `TENQUYEN`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -313,7 +368,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`MASP`, `TENSP`, `SOLUONG`, `GIA`, `DONVITINH`, `MAHANG`, `IMG`, `DESCRIPTION`, `enable`) VALUES
@@ -404,7 +459,7 @@ INSERT INTO `sanpham` (`MASP`, `TENSP`, `SOLUONG`, `GIA`, `DONVITINH`, `MAHANG`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taikhoan`
+-- Table structure for table `taikhoan`
 --
 
 CREATE TABLE `taikhoan` (
@@ -417,42 +472,43 @@ CREATE TABLE `taikhoan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `taikhoan`
+-- Dumping data for table `taikhoan`
 --
 
 INSERT INTO `taikhoan` (`USERID`, `USERNAME`, `PASSWORD`, `EMAIL`, `MAQUYEN`, `enable`) VALUES
 (1, 'thanhtien', '123456789', 'thanhtien@gmail.com', 0, 1),
 (2, 'staff', 'staff', 'staff@gmail.com', 1, 1),
 (3, 'admin', 'admin', 'admin@gmail.com', 2, 1),
-(4, 'manager', 'manager', 'manager@gmail.com', 3, 1),
+(4, 'manager', 'manager', 'manager@gmail.com', 3, 0),
 (5, 'lanhuong123', '123456789', 'lanhuong@gmail.com', 1, 1),
 (6, 'tranphong22', '123456789', 'tranphong@gmail.com', 1, 1),
 (7, 'thanhquang99', '123456789', 'buiquang@gmail.com', 1, 1),
 (8, 'phuongle1999', '123456789', 'phuongle@gmail.com', 1, 1),
 (9, 'hogiao2k2', '123456789', 'hogiao@gmail.com', 1, 1),
 (10, 'chinguyenthi', '123456789', 'chinguyen@gmail.com', 1, 1),
-(11, 'tamtru45', '123456789', 'nguyentam@gmail.com', 1, 1);
+(11, 'tamtru45', '123456789', 'nguyentam@gmail.com', 1, 1),
+(129, 'thanhtienpro', '123456789', 'abc@gmail.com', 0, 0);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chitiethd`
+-- Indexes for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
   ADD PRIMARY KEY (`MAHD`,`MASP`),
   ADD KEY `FK_CTHD` (`MASP`,`MAHD`) USING BTREE;
 
 --
--- Chỉ mục cho bảng `hang`
+-- Indexes for table `hang`
 --
 ALTER TABLE `hang`
   ADD PRIMARY KEY (`MAHANG`),
   ADD KEY `FK_H` (`MALOAI`);
 
 --
--- Chỉ mục cho bảng `hoadon`
+-- Indexes for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`MAHD`) USING BTREE,
@@ -460,33 +516,33 @@ ALTER TABLE `hoadon`
   ADD KEY `FK_HD_1` (`MANV`);
 
 --
--- Chỉ mục cho bảng `khachhang`
+-- Indexes for table `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`MAKH`),
   ADD KEY `FK_TK_KH` (`USERID_KH`);
 
 --
--- Chỉ mục cho bảng `loai`
+-- Indexes for table `loai`
 --
 ALTER TABLE `loai`
   ADD PRIMARY KEY (`MALOAI`);
 
 --
--- Chỉ mục cho bảng `nhacungcap`
+-- Indexes for table `nhacungcap`
 --
 ALTER TABLE `nhacungcap`
   ADD PRIMARY KEY (`MANCC`);
 
 --
--- Chỉ mục cho bảng `nhanvien`
+-- Indexes for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD PRIMARY KEY (`MANV`),
   ADD KEY `FK_TK_NV` (`USERID_NV`);
 
 --
--- Chỉ mục cho bảng `phieunhaphang`
+-- Indexes for table `phieunhaphang`
 --
 ALTER TABLE `phieunhaphang`
   ADD PRIMARY KEY (`IDNHAP`),
@@ -494,20 +550,20 @@ ALTER TABLE `phieunhaphang`
   ADD KEY `FK_SP` (`MASP`);
 
 --
--- Chỉ mục cho bảng `quyen`
+-- Indexes for table `quyen`
 --
 ALTER TABLE `quyen`
   ADD PRIMARY KEY (`MAQUYEN`);
 
 --
--- Chỉ mục cho bảng `sanpham`
+-- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`MASP`),
   ADD KEY `FK_SP` (`MAHANG`);
 
 --
--- Chỉ mục cho bảng `taikhoan`
+-- Indexes for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`USERID`),
@@ -515,92 +571,104 @@ ALTER TABLE `taikhoan`
   ADD KEY `FK_Q` (`MAQUYEN`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `hang`
+-- AUTO_INCREMENT for table `hang`
 --
 ALTER TABLE `hang`
   MODIFY `MAHANG` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20009;
 
 --
--- AUTO_INCREMENT cho bảng `khachhang`
+-- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
   MODIFY `MAKH` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `loai`
+-- AUTO_INCREMENT for table `loai`
 --
 ALTER TABLE `loai`
   MODIFY `MALOAI` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
--- AUTO_INCREMENT cho bảng `nhacungcap`
+-- AUTO_INCREMENT for table `nhacungcap`
 --
 ALTER TABLE `nhacungcap`
   MODIFY `MANCC` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `nhanvien`
+-- AUTO_INCREMENT for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   MODIFY `MANV` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1008;
 
 --
--- AUTO_INCREMENT cho bảng `phieunhaphang`
+-- AUTO_INCREMENT for table `phieunhaphang`
 --
 ALTER TABLE `phieunhaphang`
   MODIFY `IDNHAP` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `sanpham`
+-- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `MASP` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
--- AUTO_INCREMENT cho bảng `taikhoan`
+-- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `USERID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `USERID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chitiethd`
+-- Constraints for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
   ADD CONSTRAINT `FK_CTHD` FOREIGN KEY (`MASP`) REFERENCES `sanpham` (`MASP`),
   ADD CONSTRAINT `FK_CTHD_1` FOREIGN KEY (`MAHD`) REFERENCES `hoadon` (`MAHD`);
 
 --
--- Các ràng buộc cho bảng `hang`
+-- Constraints for table `hang`
 --
 ALTER TABLE `hang`
   ADD CONSTRAINT `FK_H` FOREIGN KEY (`MALOAI`) REFERENCES `loai` (`MALOAI`);
 
 --
--- Các ràng buộc cho bảng `hoadon`
+-- Constraints for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD CONSTRAINT `FK_HD` FOREIGN KEY (`MAKH`) REFERENCES `khachhang` (`MAKH`),
   ADD CONSTRAINT `FK_HD_1` FOREIGN KEY (`MANV`) REFERENCES `nhanvien` (`MANV`);
 
 --
--- Các ràng buộc cho bảng `khachhang`
+-- Constraints for table `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD CONSTRAINT `khachhang_ibfk` FOREIGN KEY (`USERID_KH`) REFERENCES `taikhoan` (`USERID`);
 
 --
--- Các ràng buộc cho bảng `nhanvien`
+-- Constraints for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD CONSTRAINT `nhanvien_ibfk` FOREIGN KEY (`USERID_NV`) REFERENCES `taikhoan` (`USERID`);
+
+--
+-- Constraints for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  ADD CONSTRAINT `FK_SP` FOREIGN KEY (`MAHANG`) REFERENCES `hang` (`MAHANG`);
+
+--
+-- Constraints for table `taikhoan`
+--
+ALTER TABLE `taikhoan`
+  ADD CONSTRAINT `taikhoan_quyen` FOREIGN KEY (`MAQUYEN`) REFERENCES `quyen` (`MAQUYEN`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

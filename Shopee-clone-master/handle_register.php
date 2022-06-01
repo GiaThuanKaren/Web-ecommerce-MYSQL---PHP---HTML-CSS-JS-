@@ -26,6 +26,8 @@ if (!empty($_POST)) {
         $sqlInsert = "INSERT INTO taikhoan(USERNAME, PASSWORD, EMAIL, MAQUYEN, enable)
         VALUES ('$username', '$password', '$email', 0, 1)";
         execute($sqlInsert);
+        $sql = "INSERT INTO khachhang(USERID_KH, enable_kh) VALUES((SELECT USERID FROM taikhoan WHERE USERNAME = '$username'), 1)";
+        execute($sql);
         echo json_encode(array("statusCode" => 200));
     }
 }
